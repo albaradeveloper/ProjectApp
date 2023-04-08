@@ -1,6 +1,6 @@
-# cuorse
+# Sudaman App
 
-A new Flutter project.
+An application to register the ownership, management and monitoring of electronic devices by the authorities concerned with preserving security and property.
 
 ## Getting Started
 
