@@ -7,8 +7,6 @@ class HomeBindig implements Bindings {
   @override
   void dependencies() {
      Get.lazyPut(() => OnBoardingControllerImp(),fenix: true);
-     Get.lazyPut(() => LoginController(), fenix: true);
-     Get.lazyPut(() => SignUpController(), fenix: true);
   }
 
 }

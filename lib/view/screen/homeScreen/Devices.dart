@@ -17,7 +17,7 @@ class Devices extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorApp.primary,
-        title: Text("My Device"),
+        title: Text('64'.tr),
         leading: Container(
           padding: EdgeInsets.all(8),
           child: CircleAvatar(
@@ -37,9 +37,9 @@ class Devices extends StatelessWidget {
           onPressed: () {
             Get.defaultDialog(
                 backgroundColor: AppColor.lightColor,
-                title: "Add Device",
-                textConfirm: 'Add'.tr,
-                textCancel: 'Cancel'.tr,
+                title: '38'.tr,
+                textConfirm: '39'.tr,
+                textCancel: '40'.tr,
                 confirmTextColor: AppColor.lightColor,
                 contentPadding: EdgeInsets.all(10),
                 onCancel: (){
@@ -55,26 +55,27 @@ class Devices extends StatelessWidget {
                         textField(
                             validate: (validate){},
                             prefIcon: Icon(Icons.numbers),
-                            hint: 'Serial Number',
-                            // controller: controller,
-                            type: TextInputType.text
+                            hint: '41'.tr,
+                            controller: controller.deviceSerial,
+                            type: TextInputType.text,
+                            decoration: const InputDecoration()
                         ),
                         SizedBox(height: 10,),
                         textField(
                             validate: (validate){},
                             prefIcon: Icon(Icons.devices_other),
-                            hint: 'Device Name',
-                            // controller: controller,
+                            controller: controller.deviceName,
+                            hint: '42'.tr,
                             type: TextInputType.text
                         ),
                         SizedBox(height: 10,),
-                        GetBuilder<AddDeviceController>(
+                        GetBuilder<DevicesController>(
                             builder: (context) {
                               return DropdownButton(
-                                hint: Text('Select Category'),
-                                onChanged: c.changeCategory,
-                                value: c.valueChooseCategory ,
-                                items: c.listCategory.map((value) {
+                                hint: Text('43'.tr),
+                                onChanged: controller.changeCategory,
+                                value: controller.valueChooseCategory ,
+                                items: controller.listCategory.map((value) {
                                   return DropdownMenuItem(
                                       value: value,
                                       child: Text(value)
@@ -84,13 +85,13 @@ class Devices extends StatelessWidget {
                             }
                         ),
                         SizedBox(height: 10,),
-                        GetBuilder<AddDeviceController>(
+                        GetBuilder<DevicesController>(
                             builder: (context) {
                               return DropdownButton(
-                                hint: Text('Select Brand'),
-                                onChanged: c.changeBrand,
-                                value: c.valueChooseBrand ,
-                                items: c.listBrand.map((value) {
+                                hint: Text('44'.tr),
+                                onChanged: controller.changeBrand,
+                                value: controller.valueChooseBrand ,
+                                items: controller.listBrand.map((value) {
                                   return DropdownMenuItem(
                                       value: value,
                                       child: Text(value)
@@ -100,13 +101,13 @@ class Devices extends StatelessWidget {
                             }
                         ),
                         SizedBox(height: 10,),
-                        GetBuilder<AddDeviceController>(
+                        GetBuilder<DevicesController>(
                             builder: (context) {
                               return DropdownButton(
-                                hint: Text('SelectColor'),
-                                onChanged: c.changeColor,
-                                value: c.valueChooseColor ,
-                                items: c.listColor.map((value) {
+                                hint: Text('50'.tr),
+                                onChanged: controller.changeColor,
+                                value: controller.valueChooseColor ,
+                                items: controller.listColor.map((value) {
                                   return DropdownMenuItem(
                                       value: value,
                                       child: Text(value)

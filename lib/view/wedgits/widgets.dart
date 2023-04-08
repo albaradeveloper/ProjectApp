@@ -15,6 +15,7 @@ Widget textField({
   @required TextInputType? type,
   double radius = 8.0,
   bool isPassword = false,
+  InputDecoration? decoration,
 }) =>
     TextFormField(
       controller: controller,

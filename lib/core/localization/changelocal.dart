@@ -9,13 +9,12 @@ class LocalController extends GetxController {
 
   MyServices myServices = Get.find();
   Locale? language;
-  //ThemeData appTheme = themeArbic;
+
 
   changeLang(String langCode){
     Locale locale = Locale(langCode);
     myServices.sharedPreferences.setString("lang", langCode);
-   // appTheme = langCode == 'en' ? themeEnglish : themeArbic;
-   // Get.changeTheme(appTheme);
+
     Get.updateLocale(locale);
   }
 

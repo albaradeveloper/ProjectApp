@@ -1,13 +1,11 @@
 import 'package:cuorse/controller/signup_controller.dart';
 import 'package:cuorse/core/constant/colors.dart';
-import 'package:cuorse/data/dataSource/static/onBoardingData.dart';
 import 'package:cuorse/view/wedgits/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import '../../../controller/login_controller.dart';
-import '../../wedgits/onBoardingWidget.dart';
+
 
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);
@@ -29,14 +27,14 @@ class SignUp extends StatelessWidget {
             onStepContinue: () {
               controller.currentStep.value++;
               if(controller.currentStep.value > 4 ){
-                Get.toNamed("/tentative");
+                Get.offAllNamed("/home");
                 controller.currentStep.value = 0;
                 Get.showSnackbar(
                     GetSnackBar(
                       backgroundColor: Colors.green,
                       padding: const EdgeInsets.all(10),
                       title: '12'.tr,
-                      message: 'Create Account Seccessfully'.tr,
+                      message: '24'.tr,
                       borderRadius: 7,
                       icon: Icon(Icons.done),
                       duration: Duration(
@@ -68,7 +66,7 @@ class SignUp extends StatelessWidget {
                       type: TextInputType.emailAddress,
                       validate: (value) {
                         if (value!.isEmpty) {
-                          return "Email is Empty";
+                          return  '25'.tr;
                         }
                         return null;
                       }),
@@ -85,7 +83,7 @@ class SignUp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "OTP Code :",
+                        '26'.tr,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       SizedBox(
@@ -177,19 +175,19 @@ class SignUp extends StatelessWidget {
                       : controller.currentStep.value == 2
                           ? StepState.editing
                           : StepState.indexed,
-                  title: Text('Address'.tr),
+                  title: Text('27'.tr),
                   content: Form(
                     child: Column(
                       children: [
                         textField(
                             controller: controller.email,
                             // title: Text('Address'.tr, style: Theme.of(context).textTheme.bodyText1,),
-                            hint: 'address'.tr,
+                            hint: '27'.tr,
                             prefIcon: Icon(Icons.maps_home_work),
                             type: TextInputType.emailAddress,
                             validate: (value) {
                               if (value!.isEmpty) {
-                                return "Email is Empty";
+                                return '28'.tr;
                               }
                               return null;
                             }),
@@ -201,7 +199,7 @@ class SignUp extends StatelessWidget {
                             type: TextInputType.emailAddress,
                             validate: (value) {
                               if (value!.isEmpty) {
-                                return "Email is Empty";
+                                return '29'.tr;
                               }
                               return null;
                             }),
@@ -215,11 +213,11 @@ class SignUp extends StatelessWidget {
                       : controller.currentStep.value == 3
                           ? StepState.editing
                           : StepState.indexed,
-                  title: Text('Image'.tr),
+                  title: Text( '65'.tr),
                   content: Column(
                     children: [
                       Text(
-                        "Choose Your Image Profile :",
+                        '30'.tr,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       SizedBox(
@@ -253,7 +251,7 @@ class SignUp extends StatelessWidget {
                       : controller.currentStep.value == 4
                       ? StepState.editing
                       : StepState.indexed,
-                  title: Text('Password'.tr),
+                  title: Text('16'.tr),
                   content:   Form(
                     key: controller.formKey,
                     child: Column(
@@ -263,7 +261,7 @@ class SignUp extends StatelessWidget {
                           builder: (controller) => textField(
                               controller: controller.password,
                               //title: Text('16'.tr,),
-                              hint: 'Password'.tr,
+                              hint: '16'.tr,
                               prefIcon: Icon(Icons.lock_outline),
                               sufIcon: controller.ispasswordShow
                                   ? Icons.visibility_outlined
@@ -275,7 +273,7 @@ class SignUp extends StatelessWidget {
                               type: TextInputType.visiblePassword,
                               validate: (value) {
                                 if (value!.isEmpty) {
-                                  return "password is Empty";
+                                  return '32'.tr;
                                 }
                                 return null;
                               }),
@@ -287,7 +285,7 @@ class SignUp extends StatelessWidget {
                           builder: (controller) => textField(
                               controller: controller.password,
                             //  title: Text('16'.tr,),
-                              hint: 'Confirm Password'.tr,
+                              hint: '31'.tr,
                               prefIcon: Icon(Icons.lock_outline),
                               sufIcon: controller.ispasswordShow
                                   ? Icons.visibility_outlined
@@ -299,7 +297,7 @@ class SignUp extends StatelessWidget {
                               type: TextInputType.visiblePassword,
                               validate: (value) {
                                 if (value!.isEmpty) {
-                                  return "password is Empty";
+                                  return '32'.tr;
                                 }
                                 return null;
                               }),

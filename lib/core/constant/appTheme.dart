@@ -33,7 +33,7 @@ ThemeData lightTheme = ThemeData(
       centerTitle: true,
       systemOverlayStyle: SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.dark,
-          statusBarColor: AppColor.primarye),
+          statusBarColor: AppColor.lightColor),
       iconTheme: IconThemeData(color: AppColor.primary)),
   textTheme: const TextTheme(
     headline1: TextStyle(

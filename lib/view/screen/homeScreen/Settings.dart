@@ -9,7 +9,7 @@ class Settings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Settings"),
+        title: Text('69'.tr),
         backgroundColor: AppColor.primary,
           elevation: 0,
       ),
@@ -24,6 +24,7 @@ class Settings extends StatelessWidget {
               leading: Icon(Icons.language),
               trailing: Switch(
                 onChanged: (bool value) {
+
                 },
                 value: false,
 
@@ -35,6 +36,7 @@ class Settings extends StatelessWidget {
                 leading: Icon(Icons.brightness_medium),
                 trailing: Switch(
                   onChanged: (bool value) {
+
                   },
                   value: false,
 

@@ -16,7 +16,7 @@ class Tentative extends StatelessWidget {
           onPressed: (){
             Get.toNamed("/login");
           },
-          icon: Icon(Icons.more_vert),
+          icon: Icon(Icons.login),
         ),
 
       ),
@@ -26,12 +26,21 @@ class Tentative extends StatelessWidget {
          // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            textField(
-                hint: 'search'.tr,
-                validate: (val){} ,
-                prefIcon: Icon(Icons.search),
-                controller: detect,
-                type: TextInputType.text
+            Form(
+              child: TextFormField(
+                keyboardType: TextInputType.text,
+                decoration: const InputDecoration(
+                    hintText: 'ادخل الرقم التسلسلي للجهاز',
+                    prefixIcon: Icon(Icons.numbers),
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+
+                    )
+
+                ),
+              ),
             ),
             const SizedBox(
               height: 15,

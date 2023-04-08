@@ -1,16 +1,15 @@
-import 'package:cuorse/controller/addDevice_controller.dart';
-import 'package:cuorse/core/constant/appTheme.dart';
+import 'package:cuorse/controller/home_controller.dart';
 import 'package:cuorse/core/constant/colors.dart';
 import 'package:cuorse/view/wedgits/onBoardingWidget.dart';
 import 'package:cuorse/view/wedgits/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/dialog/dialog_route.dart';
+
 
 class Home extends StatelessWidget {
    Home({Key? key}) : super(key: key);
   
-  AddDeviceController controller = Get.put(AddDeviceController());
+  HomeController controller = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          "Albara omer Khalaf Allah",
+          '33'.tr,
           style: TextStyle(
             color: AppColor.lightColor
           ),
@@ -42,28 +41,28 @@ class Home extends StatelessWidget {
                 Column(
                   children: [
                     Text("3",style: Theme.of(context).textTheme.headline4,),
-                    Text("Mobile",style: Theme.of(context).textTheme.bodyText1),
+                    Text('34'.tr,style: Theme.of(context).textTheme.bodyText1),
 
                   ],
                 ),
                 Column(
                   children: [
                     Text("1",style: Theme.of(context).textTheme.headline4,),
-                    Text("LabTop",style: Theme.of(context).textTheme.bodyText1),
+                    Text('35'.tr,style: Theme.of(context).textTheme.bodyText1),
 
                   ],
                 ),
                 Column(
                   children: [
                     Text("0",style: Theme.of(context).textTheme.headline4,),
-                    Text("Camera",style: Theme.of(context).textTheme.bodyText1),
+                    Text('36'.tr,style: Theme.of(context).textTheme.bodyText1),
 
                   ],
                 ),
                 Column(
                   children: [
                     Text("2",style: Theme.of(context).textTheme.headline4,),
-                    Text("AirBut",style: Theme.of(context).textTheme.bodyText1),
+                    Text('37'.tr,style: Theme.of(context).textTheme.bodyText1),
 
                   ],
                 ),
@@ -76,9 +75,9 @@ class Home extends StatelessWidget {
         onPressed: () {
           Get.defaultDialog(
             backgroundColor: AppColor.lightColor,
-            title: "Add Device",
-            textConfirm: 'Add'.tr,
-            textCancel: 'Cancel'.tr,
+            title: '38'.tr,
+            textConfirm: '39'.tr,
+            textCancel: '40'.tr,
             confirmTextColor: AppColor.lightColor,
             contentPadding: EdgeInsets.all(10),
             onCancel: (){
@@ -94,23 +93,24 @@ class Home extends StatelessWidget {
                     textField(
                         validate: (validate){},
                         prefIcon: Icon(Icons.numbers),
-                        hint: 'Serial Number',
-                        // controller: controller,
-                        type: TextInputType.text
+                        hint: '41'.tr,
+                        controller: controller.serial,
+                        type: TextInputType.text,
+                        decoration: const InputDecoration()
                     ),
                     SizedBox(height: 10,),
                     textField(
                         validate: (validate){},
                         prefIcon: Icon(Icons.devices_other),
-                        hint: 'Device Name',
-                        // controller: controller,
+                        controller: controller.deviceName,
+                        hint: '42'.tr,
                         type: TextInputType.text
                     ),
                     SizedBox(height: 10,),
-                    GetBuilder<AddDeviceController>(
+                    GetBuilder<HomeController>(
                         builder: (context) {
                           return DropdownButton(
-                            hint: Text('Select Category'),
+                            hint: Text('43'.tr),
                             onChanged: controller.changeCategory,
                             value: controller.valueChooseCategory ,
                             items: controller.listCategory.map((value) {
@@ -123,10 +123,10 @@ class Home extends StatelessWidget {
                         }
                     ),
                     SizedBox(height: 10,),
-                    GetBuilder<AddDeviceController>(
+                    GetBuilder<HomeController>(
                         builder: (context) {
                           return DropdownButton(
-                            hint: Text('Select Brand'),
+                            hint: Text('44'.tr),
                             onChanged: controller.changeBrand,
                             value: controller.valueChooseBrand ,
                             items: controller.listBrand.map((value) {
@@ -139,10 +139,10 @@ class Home extends StatelessWidget {
                         }
                     ),
                     SizedBox(height: 10,),
-                    GetBuilder<AddDeviceController>(
+                    GetBuilder<HomeController>(
                         builder: (context) {
                           return DropdownButton(
-                            hint: Text('SelectColor'),
+                            hint: Text('50'.tr),
                             onChanged: controller.changeColor,
                             value: controller.valueChooseColor ,
                             items: controller.listColor.map((value) {
@@ -181,20 +181,21 @@ class Home extends StatelessWidget {
                 Form(
                   child: Column(
                     children: [
-                      TextFormField(
-                        keyboardType: TextInputType.text,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter Your Serial Number',
-                          prefixIcon: Icon(Icons.search),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                      textField(
+                          validate: (v){},
+                          prefIcon: Icon(Icons.search),
+                         hint: '23'.tr,
+                          controller: controller.serial,
+                          type: TextInputType.text,
+                           decoration: const InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
 
-                          )
+                            )
 
-                        ),
-                      ),
+                        ),),
                       SizedBox(
                         height: 10,
                       ),

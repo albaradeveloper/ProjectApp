@@ -24,26 +24,26 @@ class MasterScreen extends StatelessWidget {
 
                       SalomonBottomBarItem(
                         icon: Icon(Icons.home),
-                        title: Text("Home"),
+                        title: Text('66'.tr),
                         // selectedColor: Colors.purple,
                       ),
 
                       SalomonBottomBarItem(
                         icon: Icon(Icons.devices_other),
-                        title: Text("Devices"),
+                        title: Text('67'.tr),
                         // selectedColor: Colors.pink,
                       ),
 
                       SalomonBottomBarItem(
                         icon: Icon(Icons.person),
-                        title: Text("Profile"),
+                        title: Text('68'.tr),
                         // selectedColor: Colors.orange,
                       ),
 
                       /// Profile
                       SalomonBottomBarItem(
                         icon: Icon(Icons.settings),
-                        title: Text("Settings"),
+                        title: Text('69'.tr),
                         // selectedColor: Colors.teal,
                       ),
                     ],
