@@ -29,7 +29,7 @@ class LognIn extends StatelessWidget {
             children: [
               Text(
                 '13'.tr,
-                style: Theme.of(context).textTheme.headline1,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
               const SizedBox(
                 height: 50,
@@ -79,7 +79,7 @@ class LognIn extends StatelessWidget {
                       height: 10,
                     ),
                     customButtonText(
-                        text: Text('18'.tr,style: Theme.of(context).textTheme.headline5,), size: 15,
+                        text: Text('18'.tr,style: Theme.of(context).textTheme.titleMedium,), size: 15,
                         onPress: () {
                         Get.toNamed('/forgetPassword');
                     }),
@@ -103,11 +103,11 @@ class LognIn extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('21'.tr,
-                            style: Theme.of(context).textTheme.bodyText1),
+                            style: Theme.of(context).textTheme.bodyLarge),
                         customButtonText(
                             text: Text(
                               '20'.tr,
-                              style: Theme.of(context).textTheme.button,
+                              style: Theme.of(context).textTheme.labelLarge,
                             ),
                             onPress: () {
                               Get.toNamed("/signup");

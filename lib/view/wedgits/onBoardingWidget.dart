@@ -25,7 +25,7 @@ Widget customButton(
       width: width,
       child: ElevatedButton(
           onPressed: onPress,
-          style: ElevatedButton.styleFrom(primary: background),
+          style: ElevatedButton.styleFrom(backgroundColor: background),
           child: Text(
             "$text",
             style: TextStyle(color: color),

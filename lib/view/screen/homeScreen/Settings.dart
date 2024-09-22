@@ -45,7 +45,9 @@ class Settings extends StatelessWidget {
             ListTile(
                 title: Text('Contact Me'),
                 subtitle: Text("WhatsApp"),
-                leading: Icon(Icons.whatsapp),
+                //used font_awesome_flutter: ^10.7.0 for icon whatsapp
+               // leading: Icon(Icons.whatsapp),
+               leading: Icon(Icons.call),
 
             ),
             ListTile(

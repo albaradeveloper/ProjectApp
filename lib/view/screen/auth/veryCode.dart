@@ -46,7 +46,7 @@ class VeryCode extends StatelessWidget {
                       height: 68,
                       width: 64,
                       child: TextField(
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleMedium,
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
@@ -64,7 +64,7 @@ class VeryCode extends StatelessWidget {
                       height: 68,
                       width: 64,
                       child: TextField(
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleMedium,
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
@@ -82,7 +82,7 @@ class VeryCode extends StatelessWidget {
                       height: 68,
                       width: 64,
                       child: TextField(
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleMedium,
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(
@@ -100,7 +100,7 @@ class VeryCode extends StatelessWidget {
                       height: 68,
                       width: 64,
                       child: TextField(
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         decoration: InputDecoration(

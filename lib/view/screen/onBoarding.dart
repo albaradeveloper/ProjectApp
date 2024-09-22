@@ -22,7 +22,7 @@ class OnBoarding extends GetView<OnBoardingControllerImp> {
                 margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
                 child: customButtonText(
                     text:
-                        Text('1'.tr, style: Theme.of(context).textTheme.button),
+                        Text('1'.tr, style: Theme.of(context).textTheme.labelLarge),
                     onPress: () {
                       Get.offAllNamed("/tentative");
                     })),
@@ -51,14 +51,14 @@ class OnBoarding extends GetView<OnBoardingControllerImp> {
                             ),
                             Text(
                               onBoardingList[index].title!,
-                              style: Theme.of(context).textTheme.headline1,
+                              style: Theme.of(context).textTheme.headlineLarge,
                             ),
                             const SizedBox(
                               height: 15,
                             ),
                             Text(onBoardingList[index].content!,
                                 textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.bodyText1)
+                                style: Theme.of(context).textTheme.bodyLarge)
                           ],
                         ))),
             Container(

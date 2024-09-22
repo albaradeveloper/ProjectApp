@@ -136,7 +136,7 @@ class Devices extends StatelessWidget {
                   return Container(
                     color: Colors.white,
                     child: ListTile(
-                      title: Text("${devicesList[index].name}",style : Theme.of(context).textTheme.headline1 ),
+                      title: Text("${devicesList[index].name}",style : Theme.of(context).textTheme.headlineLarge ),
                       subtitle: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
