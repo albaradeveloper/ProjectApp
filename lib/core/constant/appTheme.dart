@@ -125,7 +125,7 @@ ThemeData darkTheme = ThemeData(
         onSecondary: AppColor.lightColor,
         error: AppColor.dangars,
         onError: AppColor.dangars,
-        background: AppColor.dangars,
+        background: Color.fromARGB(255, 156, 112, 112),
         onBackground: AppColor.lightColor,
         surface: Colors.teal,
         onSurface: Colors.teal),
